@@ -1,7 +1,6 @@
 package com.jo;
 
 import java.util.Arrays;
-import java.util.Spliterator;
 import java.util.stream.Collectors;
 
 public class LambdaTest {

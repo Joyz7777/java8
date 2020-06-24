@@ -1,4 +1,4 @@
-package com.jo.conifg;
+package com.jo;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,6 +33,9 @@ public class ApplicationConfig extends AbstractJdbcConfiguration {
     @Value("${spring.datasource.url}")
     private String url;
 
+    @Value("${spring.datasource.driverClassName}")
+    private String driverClassName;
+
 
 
     @Bean("dataSource")
@@ -43,7 +46,7 @@ public class ApplicationConfig extends AbstractJdbcConfiguration {
         druidDataSource.setUsername(username);
         druidDataSource.setUrl(url);
         druidDataSource.setPassword(password);
-        druidDataSource.setDriverClassName("com.mysql.jdbc.Driver");
+        druidDataSource.setDriverClassName(driverClassName);
 
         return druidDataSource;
 
